@@ -1,5 +1,5 @@
 body {
-    font-family:  cursive, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     display: flex;
     flex-direction: column;
@@ -11,19 +11,19 @@ body {
 }
 
 h1 {
-    color: #ff4081;
+    color: #4079ff;
     margin-bottom: 20px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px #fff, 0 0 25px #ff4081, 0 0 5px #ff4081;
+    text-shadow: 1px 1px 2px #fff, 0 0 25px #4079ff, 0 0 5px #4079ff;
     animation: glow 1s infinite alternate;
 }
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081;
+        text-shadow: 0 0 10px #4079ff, 0 0 20px #4079ff, 0 0 30px #4079ff, 0 0 40px #4079ff, 0 0 50px #4079ff, 0 0 60px #4079ff, 0 0 70px #4079ff;
     }
     to {
-        text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081, 0 0 80px #ff4081;
+        text-shadow: 0 0 20px #4079ff, 0 0 30px #4079ff, 0 0 40px #4079ff, 0 0 50px #4079ff, 0 0 60px #4079ff, 0 0 70px #4079ff, 0 0 80px #4079ff;
     }
 }
 
@@ -31,7 +31,7 @@ input[type="text"] {
     width: 300px;
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid #ff4081;
+    border: 2px solid #4079ff;
     border-radius: 25px;
     outline: none;
     transition: border-color 0.3s ease;
@@ -42,7 +42,7 @@ input[type="text"]:focus {
 }
 
 button {
-    background: #ff4081;
+    background: #4079ff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -61,12 +61,15 @@ button:hover {
     margin-top: 20px;
     padding: 10px;
     background: #fff;
-    border: 2px solid #ff4081;
+    border: 2px solid #4079ff;
     border-radius: 10px;
     width: 300px;
     word-wrap: break-word;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#copyButton {
+    margin-top: 10px;
 }
 
 div {
@@ -75,7 +78,7 @@ div {
 }
 
 h2 {
-    color: #ff4081;
+    color: #4079ff;
 }
 
 @media (max-width: 480px){
