@@ -1,0 +1,90 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    color: #ff4081;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #fff, 0 0 25px #ff4081, 0 0 5px #ff4081;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081;
+    }
+    to {
+        text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081, 0 0 80px #ff4081;
+    }
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff4081;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #333;
+}
+
+button {
+    background: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background: #ff79b0;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid #ff4081;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+div {
+    margin: 10px 0;
+    text-align: center;
+}
+
+h2 {
+    color: #ff4081;
+}
+
+@media (max-width: 480px){
+
+    h1 {
+        font-size: 20px;
+    color: #40b9ff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #fff, 0 0 25px #40b9ff, 0 0 5px #40b9ff;
+    animation: glow 1s infinite alternate;
+}
+}

@@ -1,0 +1,25 @@
+Explanation:
+1 } Encryption Function (complexEncryption):
+
+XOR each character of the input text with the key.
+Shift each character by 3 positions.
+Encode the result using Base64.
+
+
+2 } Decryption Function (complexDecryption):
+
+Decode the Base64 string.
+Reverse the character shift by subtracting 3 positions.
+XOR each character with the key to retrieve the original text.
+
+
+3 } HTML Structure:
+
+Input fields for entering text to encrypt and decrypt.
+Buttons to trigger encryption and decryption.
+Output area to display the results.
+
+
+4 } Event Listeners:
+
+Added event listeners to the buttons to call the encryption and decryption functions and display the results.
