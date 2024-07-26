@@ -1,25 +1,3 @@
-// function encription(normalText){
-//     const normalText = document.getElementById(normaltext).value ;
-// let modifiedText = '';
-
-// for (let i = 0; i < normalText.length; i++) {
-//     modifiedText += String.fromCharCode(normalText.charCodeAt(i) + 4);
-// }
-
-// console.log(modifiedText);
-// };
-// function decription(encriptedText){
-//     const encriptedText= document.getElementById("encriptedText").value ;
-// let modifiedText = '';
-
-// for (let i = 0; i < encriptedText.length; i++) {
-//     modifiedText += String.fromCharCode(encriptedText.charCodeAt(i) + 4);
-// }
-
-// console.log(modifiedText);
-// };
-
-
 function complexEncryption(normalText, key) {
     let xorText = '';
     for (let i = 0; i < normalText.length; i++) {
@@ -49,7 +27,7 @@ document.getElementById("encryptButton").addEventListener("click", function() {
     const normalText = document.getElementById("normaltext").value;
     const key = "9528217357";
     const encryptedText = complexEncryption(normalText, key);
-    document.getElementById("output").innerText = `Encrypted text: ${encryptedText}`;
+    document.getElementById("output").innerText = `${encryptedText}`;
 });
 
 document.getElementById("decryptButton").addEventListener("click", function() {
@@ -67,70 +45,11 @@ document.getElementById("whatsappButton").addEventListener("click", function() {
     window.open(whatsappUrl, '_blank');
 });
 
-    // const aesKey = CryptoJS.enc.Utf8.parse('0123456789012345');
-    // const rsaPublicKey = `-----BEGIN PUBLIC KEY-----
-    // [Your RSA Public Key Here]
-    // -----END PUBLIC KEY-----`;
-    // const rsaPrivateKey = `-----BEGIN PRIVATE KEY-----
-    // [Your RSA Private Key Here]
-    // -----END PRIVATE KEY-----`;
-
-    // function rsaEncrypt(text, publicKey) {
-    //     const encrypt = new JSEncrypt();
-    //     encrypt.setPublicKey(publicKey);
-    //     return encrypt.encrypt(text);
-    // }
-
-    // function rsaDecrypt(text, privateKey) {
-    //     const decrypt = new JSEncrypt();
-    //     decrypt.setPrivateKey(privateKey);
-    //     return decrypt.decrypt(text);
-    // }
-
-    // function complexEncryption(normalText, key) {
-    //     // Step 1: XOR with key
-    //     let xorText = '';
-    //     for (let i = 0; i < normalText.length; i++) {
-    //         xorText += String.fromCharCode(normalText.charCodeAt(i) ^ key.charCodeAt(i % key.length));
-    //     }
-
-    //     // Step 2: AES encryption
-    //     const aesEncrypted = CryptoJS.AES.encrypt(xorText, aesKey).toString();
-
-    //     // Step 3: RSA encryption
-    //     const rsaEncrypted = rsaEncrypt(aesEncrypted, rsaPublicKey);
-
-    //     // Step 4: Base64 encoding
-    //     return btoa(rsaEncrypted);
-    // }
-
-    // function complexDecryption(encryptedText, key) {
-    //     // Step 1: Base64 decoding
-    //     const base64Decoded = atob(encryptedText);
-
-    //     // Step 2: RSA decryption
-    //     const rsaDecrypted = rsaDecrypt(base64Decoded, rsaPrivateKey);
-
-    //     // Step 3: AES decryption
-    //     const aesDecrypted = CryptoJS.AES.decrypt(rsaDecrypted, aesKey).toString(CryptoJS.enc.Utf8);
-
-    //     // Step 4: XOR with key
-    //     let normalText = '';
-    //     for (let i = 0; i < aesDecrypted.length; i++) {
-    //         normalText += String.fromCharCode(aesDecrypted.charCodeAt(i) ^ key.charCodeAt(i % key.length));
-    //     }
-
-    //     return normalText;
-    // }
-
-    // document.getElementById("encryptButton").addEventListener("click", function() {
-    //     const normalText = document.getElementById("normaltext").value;
-    //     const encryptedText = complexEncryption(normalText, '9528217357');
-    //     document.getElementById("output").innerText = `Encrypted text: ${encryptedText}`;
-    // });
-
-    // document.getElementById("decryptButton").addEventListener("click", function() {
-    //     const encryptedText = document.getElementById("encryptedText").value;
-    //     const decryptedText = complexDecryption(encryptedText, '9528217357');
-    //     document.getElementById("output").innerText = `Decrypted text: ${decryptedText}`;
-    // })
+document.getElementById("copyButton").addEventListener("click", function() {
+    const outputText = document.getElementById("output").innerText;
+    navigator.clipboard.writeText(outputText).then(() => {
+        alert('Copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+});
