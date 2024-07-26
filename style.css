@@ -15,7 +15,7 @@ h1 {
     margin-bottom: 20px;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px #fff, 0 0 25px #4079ff, 0 0 5px #4079ff;
-    animation: glow 1s alternate;
+    animation: glow 1s infinite alternate;
 }
 
 @keyframes glow {
@@ -84,11 +84,10 @@ h2 {
 @media (max-width: 480px){
 
     h1 {
-        font-size: 20px;
-    color: #40b9ff;
+    color: #4079ff;
     margin-bottom: 20px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px #fff, 0 0 25px #40b9ff, 0 0 5px #40b9ff;
-    animation: glow 1s infinite alternate;
+    text-shadow: 1px 1px 2px #fff, 0 0 25px #4079ff, 0 0 5px #4079ff;
+    animation: glow 1s alternate;
 }
 }
