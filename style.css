@@ -64,6 +64,7 @@ button:hover {
     border: 2px solid #ff4081;
     border-radius: 10px;
     width: 300px;
+    word-wrap: break-word;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
